@@ -1,6 +1,6 @@
 import java.util.Vector;
 
-public class StackVector<E> extends Vector<E> {
+public class StackVector<E> extends Vector<E> implements Stack<E>{
     protected Vector<E> data;
 
     public StackVector()
