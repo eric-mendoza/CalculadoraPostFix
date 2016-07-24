@@ -9,7 +9,8 @@ import java.io.*;
  */
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader datos = new BufferedReader(new FileReader("datos.txt"));  // Abre documento para su lectura
+        String source = "src/datos.txt";
+        BufferedReader datos = new BufferedReader(new FileReader(source));  // Abre documento para su lectura
         String operacion = datos.readLine();  // Lee la unica linea y la guarda como string
         datos.close();  // Se finaliza el lector
 
