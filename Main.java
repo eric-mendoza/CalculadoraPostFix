@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Scanner;
 
 /**
  * Esta clase
@@ -9,14 +10,27 @@ import java.io.*;
  */
 public class Main {
     public static void main(String[] args) throws IOException {
-        String source = "src/datos.txt";
-        BufferedReader datos = new BufferedReader(new FileReader(source));  // Abre documento para su lectura
-        String operacion = datos.readLine();  // Lee la unica linea y la guarda como string
-        datos.close();  // Se finaliza el lector
+        Scanner ingreso = new Scanner(System.in);
+        System.out.println("Bienvenido!\nIngrese el nombre del archivo:\n(EL ARCHIVO DEBE DE ESTAR EN LA MISMA CARPETA QUE ESTE EJECUTABLE)");
+        String source;
 
-        Calculadora calculadora = new Calculadora();
+        try
+        {
+            //ingreso de archivo
+            source = ingreso.nextLine();
+            BufferedReader datos = new BufferedReader(new FileReader(source));  // Abre documento para su lectura
+            String operacion = datos.readLine();  // Lee la unica linea y la guarda como string
+            datos.close();  // Se finaliza el lector
 
-        System.out.println("Bienvenido! \nEl resultado de \"" + operacion + "\" es:");
-        System.out.println(calculadora.operar(operacion));
+
+            Calculadora calculadora = new Calculadora();
+
+            System.out.println("\nEl resultado de \"" + operacion + "\" es:");
+            System.out.println(calculadora.operar(operacion));
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.println("Archivo no valido!!!");
+        }
     }
 }
