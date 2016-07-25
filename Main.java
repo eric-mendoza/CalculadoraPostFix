@@ -16,9 +16,9 @@ public class Main {
         System.out.println("Bienvenido!\nSeleccione el archivo .TXT con la instruccion\n(presiona ENTER para continuar)");
         String source = "";
         ingreso.nextLine();
-        /**
-         * codigo tomado de :
-         * http://stackoverflow.com/questions/7494478/jfilechooser-from-a-command-line-program-and-popping-up-underneath-all-windows
+        /*
+         codigo tomado de :
+         http://stackoverflow.com/questions/7494478/jfilechooser-from-a-command-line-program-and-popping-up-underneath-all-windows
          */
 
         JFileChooser chooser = new JFileChooser(System.getProperty("java.class.path"));
@@ -31,7 +31,7 @@ public class Main {
                  source = chooser.getSelectedFile().getAbsolutePath();
             }
             catch (FileNotFoundException e) {
-                System.out.println("No se sseleciono ningun archivo");]
+                System.out.println("No se sseleciono ningun archivo");
 
             }
         }
