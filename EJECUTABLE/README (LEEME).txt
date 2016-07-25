@@ -1,0 +1,4 @@
+PARA EJECUAR ESCRIBIR EN LA CONSOLA DE COMANDOS
+
+java -jar HDT2Calculadora.jar
+
